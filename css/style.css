@@ -1,0 +1,135 @@
+* {
+	box-sizing: border-box;
+	margin: 0 auto;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body {
+	background: #E3E3E3;
+}
+
+.header {
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+	background: #E3E3E3;
+}
+
+.header-active {
+	width: 100%;
+	height: 250px;
+	text-align: center;
+	background: #E3E3E3;
+}
+
+.header h1, .header-active h1 {
+	padding-top: 30px;
+}
+
+.header button, .header input, .header h2, .header-active button, .header-active input, .header-active h2 {
+	margin-top: 40px;
+}
+
+button {
+	height: 35px;
+ 	width: 200px;
+  	font-size: 1em;
+  	border: 1px solid #fff;
+  	border-radius: 3px;
+  	cursor: pointer;
+  	background: #5B8BBA;
+  	color: #fff;
+}
+
+button:hover {
+	background: #759ABF;
+  	color: #fff;
+  	transition: .8s;	
+}
+
+input {
+	height: 35px;
+  	width: 200px;
+  	border-radius: 3px;
+  	border: 0.5px solid #A9A9A9;
+  	padding-left: 5px;
+}
+
+main {
+	width: 800px;
+	background: #F0A1C2;
+}
+
+img {
+	width: 179px;
+	background-size: cover;
+	position: relative;
+	left: 0;
+	top: -5px;
+	margin-top: 50px;
+	box-shadow: 3px 3px 5px #555;
+}
+
+.countries-list .country {
+	position: relative;
+}
+
+.countries-list .country .country-name {
+	position: absolute;
+	left: 30%;
+	top: -110px;
+	width: 850px;
+	font-size: 3em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #213140;
+}
+
+.country {
+	position: relative;
+	width: 800px;
+	margin-bottom: 40px;
+}
+
+.country p {
+	padding: 5px 0;
+}
+
+
+.data-name {
+	display: inline-block;
+	width: 30%;
+	height: 101px;
+	background: #FFFF00;
+}
+
+.data-name p {
+	border-bottom: 1px solid #fff;
+	padding-left: 20px;
+}
+
+.data {
+	background: #FFFF99;
+	display: inline-block;
+	width: 70%;
+	height: 101px;
+}
+
+.data p {
+	padding: 5px 0;
+	padding-left: 20px;
+	border-bottom: 1px solid #fff;
+}
+
+.bottom-blue-bar {
+	background: #4D4DFF;
+	height: 40px;
+	width: 560px;
+}
+
+.top-blue-bar {
+	display: none;
+	background: #4D4DFF;
+	height: 40px;
+	width: 800px;
+}
