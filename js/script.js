@@ -3,12 +3,11 @@
 /* Zmienne: z adresem URL; lista państw, nagłówek, górny niebieski pasek */
 var url = 'https://restcountries.eu/rest/v2/name/';
 var countriesList = document.getElementById('countries');
-var header = document.querySelector('.header');
 var topBlueBar = document.querySelector('.top-blue-bar');
 
 /* Przywiązanie do buttona funkcji wyszukującej kraje */
 document.getElementById('search').addEventListener('click', function(){
-	header.className = 'header';
+	topBlueBar.style.display = 'none';
 	searchCountries();
 });
 
@@ -28,7 +27,7 @@ function searchCountries(){
 /* Funkcja wyświetlająca informacje o państwach */
 function showCountriesList(resp){
 	countriesList.innerHTML = '';
-	header.className = 'header-active';
+	/*header.className = 'header-active';*/
 	resp.forEach(function(item){
 
 		/* Flaga */
