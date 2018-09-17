@@ -10,17 +10,17 @@ body {
 
 body .header {
   width: 100%;
-  height: 300px;
+  height: 240px;
   text-align: center;
   background: #E3E3E3;
 }
 
 body .header h1 {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 body .header button, body .header input, body .header h2 {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 body .header button {
@@ -70,6 +70,12 @@ img {
   box-shadow: 3px 3px 5px #555;
 }
 
+.country {
+  position: relative;
+  width: 800px;
+  margin-bottom: 40px;
+}
+
 .country-name {
   position: absolute;
   left: 30%;
@@ -80,41 +86,31 @@ img {
   text-transform: uppercase;
   color: #213140;
   line-height: 40px;
-}
-
-.country {
-  position: relative;
-  width: 800px;
-  margin-bottom: 40px;
-}
-
-.country p {
   padding: 5px 0;
 }
 
 .data-name {
   display: inline-block;
   width: 30%;
-  height: 101px;
   background: #FFFF00;
 }
 
 .data-name p {
   border-bottom: 1px solid #fff;
-  padding-left: 20px;
+  padding: 5px 0 5px 20px;
 }
 
 .data {
   background: #FFFF99;
   display: inline-block;
   width: 70%;
-  height: 101px;
+  height: 165px;
 }
 
 .data p {
-  padding: 5px 0;
-  padding-left: 20px;
+  padding: 5px 0 5px 20px;
   border-bottom: 1px solid #fff;
+  height: 33px;
 }
 
 .bottom-blue-bar {

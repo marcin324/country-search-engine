@@ -27,8 +27,15 @@ function searchCountries(){
 /* Funkcja wyświetlająca informacje o państwach */
 function showCountriesList(resp){
 	countriesList.innerHTML = '';
-	/*header.className = 'header-active';*/
 	resp.forEach(function(item){
+
+		var languages = item.languages.map(function(lang){
+			return lang.name;
+		})
+
+		var currencies = item.currencies.map(function(cur){
+			return cur.name + ' (' + cur.code + ')';
+		})
 
 		/* Flaga */
 		var countryFlag = document.createElement('img');
@@ -36,35 +43,36 @@ function showCountriesList(resp){
 		countriesList.appendChild(countryFlag);
 		
 		/* Nazwa państwa */
-		var liEl1 = document.createElement('div');
-		liEl1.innerHTML = '<p>' + item.name + '</p>';
-		countriesList.appendChild(liEl1);
+		var country = document.createElement('div');
+		country.innerHTML = '<p>' + item.name + '</p>';
+		countriesList.appendChild(country);
 
-		liEl1.className = 'country';
-		liEl1.firstChild.className = 'country-name';
+		country.className = 'country';
+		country.firstChild.className = 'country-name';
 
 		/* Lewa komórka: stolica, powierzchnia...itp. */
-		var liEl2 = document.createElement('div');
-		liEl2.innerHTML = '<p>' + 'Capital' + '<br>' + '<p>' + 'Land area' + '<br>' + '<p>' + 'Population' + '<br>';
-		liEl2.className = 'data-name';
-		liEl1.appendChild(liEl2);
+		var dataName = document.createElement('div');
+		dataName.innerHTML = '<p>' + 'Capital' + '<br></p><p>' + 'Land area' + '<br></p><p>' + 'Population' + '<br></p><p>' + 'Languages' 
+		+ '<br></p><p>' + 'Currencies' + '<br></p>';
+		dataName.className = 'data-name';
+		country.appendChild(dataName);
 
 		/* Prawa komórka - nazwa stolicy, powierzchnia w km kwadr...itp. */
-		var liEl3 = document.createElement('div');
-		liEl3.innerHTML = '<p>' + item.capital + '<br>' + '<p>' + item.area + ' sq. km.' + '<br>' + '<p>' + item.population + '<br>';
-		liEl1.appendChild(liEl3);
-		liEl3.className = 'data';
-		/*var liEl4 = liEl1.lastChild;*/
+		var data = document.createElement('div');
+		data.innerHTML = '<p>' + item.capital + '<br></p><p>' + item.area + ' sq. km.<br></p><p>' + item.population + '<br></p><p>' 
+		+ languages.join(', ') + '<br></p><p>' + currencies.join(', ') + '</p>';
+		country.appendChild(data);
+		data.className = 'data';
 		
 		/* Dolny niebieski pasek */
 		var bottomBlueBar = document.createElement('div');
 		bottomBlueBar.className = 'bottom-blue-bar';
-		liEl2.appendChild(bottomBlueBar);
+		dataName.appendChild(bottomBlueBar);
 		
 		/* Dolny niebieski pasek */
 		var bottomBlueBar = document.createElement('div');
 		bottomBlueBar.className = 'bottom-blue-bar';
-		liEl3.appendChild(bottomBlueBar);
+		data.appendChild(bottomBlueBar);
 
 		/* Górny niebieski pasek */
 		topBlueBar.style.display = 'inline-block';
