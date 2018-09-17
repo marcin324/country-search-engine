@@ -29,9 +29,8 @@ function showCountriesList(resp){
 	countriesList.innerHTML = '';
 	resp.forEach(function(item){
 
-		var languages = item.languages.map(function(lang){
-			return lang.name;
-		})
+		/* Funkcje do wyświetlenia danych na temat języków i walut - funkcje są równoważne */
+		var languages = item.languages.map(lang => lang.name).join(', ');
 
 		var currencies = item.currencies.map(function(cur){
 			return cur.name + ' (' + cur.code + ')';
@@ -60,7 +59,7 @@ function showCountriesList(resp){
 		/* Prawa komórka - nazwa stolicy, powierzchnia w km kwadr...itp. */
 		var data = document.createElement('div');
 		data.innerHTML = '<p>' + item.capital + '<br></p><p>' + item.area + ' sq. km.<br></p><p>' + item.population + '<br></p><p>' 
-		+ languages.join(', ') + '<br></p><p>' + currencies.join(', ') + '</p>';
+		+ languages + '<br></p><p>' + currencies.join(', ') + '</p>';
 		country.appendChild(data);
 		data.className = 'data';
 		
