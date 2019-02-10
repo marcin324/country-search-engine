@@ -6,33 +6,42 @@
 
 body {
   background: #E3E3E3;
-	.header {
-	  width: 100%;
-	  height: 240px;
-	  text-align: center;
-	  background: #E3E3E3;
-	
-		h1 {
-  			padding-top: 20px;
-		}
-		  button, input, h2 {
-  		margin-top: 30px;
-		}
-		button {
-	  	height: 35px;
-	  	width: 200px;
-	  	font-size: 1em;
-	  	border: 1px solid #fff;
-	  	border-radius: 3px;
-	  	cursor: pointer;
-	  	background: #5B8BBA;
-	  	color: #fff;
+
+
+  .header {
+    width: 100%;
+    height: 240px;
+    text-align: center;
+    background: #E3E3E3;
+
+    h1 {
+      text-transform: uppercase;
+      padding-top: 20px;
+    }
+
+    button,
+    input,
+    h2 {
+      margin-top: 30px;
+    }
+
+    button {
+      height: 35px;
+      width: 200px;
+      font-size: 1em;
+      border: 1px solid #fff;
+      border-radius: 3px;
+      cursor: pointer;
+      background: #5B8BBA;
+      color: #fff;
+
       &:hover {
         background: #759ABF;
         color: #fff;
         transition: .8s;
       }
-		}
+    }
+
     input {
       height: 35px;
       width: 200px;
@@ -40,11 +49,12 @@ body {
       border: 0.5px solid #A9A9A9;
       padding-left: 5px;
     }
-	}
+  }
 
   main {
     width: 800px;
     background: #F0A1C2;
+
     .countries-list {
       .top-blue-bar {
         display: none;
@@ -52,8 +62,8 @@ body {
         height: 40px;
         width: 800px;
       }
-      .countries {
-      }
+
+      .countries {}
     }
   }
 }
